@@ -37,7 +37,6 @@ const Navbar: React.FC = () => {
             <a href="#features" className="text-booking-dark hover:text-booking-primary transition-colors">{t('features')}</a>
             <a href="#testimonials" className="text-booking-dark hover:text-booking-primary transition-colors">{t('testimonials')}</a>
             <a href="#why-us" className="text-booking-dark hover:text-booking-primary transition-colors">{t('whyChooseUs')}</a>
-            <a href="#uk-launch" className="text-booking-dark hover:text-booking-primary transition-colors">{t('ukLaunch')}</a>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -82,7 +81,6 @@ const Navbar: React.FC = () => {
             <a href="#features" className="block px-4 py-2 text-booking-dark hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>{t('features')}</a>
             <a href="#testimonials" className="block px-4 py-2 text-booking-dark hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>{t('testimonials')}</a>
             <a href="#why-us" className="block px-4 py-2 text-booking-dark hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>{t('whyChooseUs')}</a>
-            <a href="#uk-launch" className="block px-4 py-2 text-booking-dark hover:bg-gray-100 rounded" onClick={() => setIsMobileMenuOpen(false)}>{t('ukLaunch')}</a>
             <div className="flex flex-col space-y-2 pt-2 border-t">
               <Button variant="outline" className="w-full justify-center border-booking-primary text-booking-primary hover:bg-booking-primary hover:text-white">
                 {t('login')}
