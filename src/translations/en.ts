@@ -1,4 +1,3 @@
-
 export const enTranslations = {
   // Navbar
   features: "Features",
@@ -9,7 +8,7 @@ export const enTranslations = {
   
   // Hero Section
   mainHeading: "All-in-One Booking & CRM Solution for Service Businesses",
-  subHeading: "Booking Hero empowers barbershops, salons, and spas with seamless online bookings and smart customer relationship management—all in one platform.",
+  subHeading: "Booking Hero empowers businesses which provide services with seamless online bookings and smart customer relationship management—all in one platform.",
   bookDemo: "Book a Demo",
   noCardRequired: "No credit card required • Free 14-day trial",
   trustedBy: "TRUSTED BY LEADING SERVICE BUSINESSES",
