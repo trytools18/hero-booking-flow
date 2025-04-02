@@ -1,12 +1,332 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import FeaturesSection from '@/components/FeaturesSection';
+import CTASection from '@/components/CTASection';
+import TestimonialCard from '@/components/TestimonialCard';
+import { Check, Calendar, Scissors, Clock, Shield, Award } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <HeroSection />
+      
+      {/* Features Section */}
+      <FeaturesSection />
+      
+      {/* Product Demo Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="w-full lg:w-1/2 order-2 lg:order-1">
+              <h2 className="section-title mb-6">Streamline Your Operations</h2>
+              <p className="text-lg text-booking-gray mb-8">
+                Manage your entire business from a single, intuitive dashboard. From appointment scheduling to customer management, Booking Hero makes everything easier.
+              </p>
+              
+              <div className="space-y-4">
+                {[
+                  'Reduce no-shows by 80% with automated reminders',
+                  'Save 10+ hours per week on administrative tasks',
+                  'Increase repeat bookings with personalized follow-ups',
+                  'Get paid faster with integrated payment processing'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="mt-1 bg-green-100 rounded-full p-1">
+                      <Check className="h-4 w-4 text-green-600" />
+                    </div>
+                    <p className="ml-3 text-booking-gray">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="w-full lg:w-1/2 order-1 lg:order-2">
+              <div className="relative">
+                <div className="absolute -top-5 -right-5 w-20 h-20 bg-booking-light rounded-full opacity-50"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Booking Hero Dashboard" 
+                  className="rounded-lg shadow-2xl relative z-10 border-4 border-white"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Mid-page CTA */}
+      <CTASection 
+        title="Start Growing Your Business Today" 
+        subtitle="Join 170+ businesses already using Booking Hero to streamline operations and grow their client base." 
+        primaryCTA="Start for Free"
+        secondaryCTA="Book a Demo"
+        backgroundStyle="gradient"
+      />
+      
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Loved by Business Owners</h2>
+            <p className="section-subtitle">See what our customers have to say about Booking Hero</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <TestimonialCard 
+              quote="Booking Hero has transformed my salon business. We've reduced no-shows by 75% and increased our monthly bookings by 30%."
+              author="Sarah Johnson"
+              position="Owner"
+              companyName="StyleHouse Salon"
+              rating={5}
+            />
+            
+            <TestimonialCard 
+              quote="The CRM features are amazing! I can track customer preferences and offer personalized services that keep them coming back."
+              author="Michael Rodriguez"
+              position="Manager"
+              companyName="Elite Barber Shop"
+              rating={5}
+            />
+            
+            <TestimonialCard 
+              quote="Setting up Booking Hero was incredibly easy. Within a day we were taking online bookings and our customers love the convenience."
+              author="Lisa Chen"
+              position="Director"
+              companyName="Tranquil Spa"
+              rating={4}
+            />
+          </div>
+          
+          {/* Stats Section */}
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-booking-primary mb-2">170+</div>
+              <p className="text-booking-gray">Businesses Onboarded</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-booking-primary mb-2">€4,000+</div>
+              <p className="text-booking-gray">Monthly Recurring Revenue</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-booking-primary mb-2">40,000+</div>
+              <p className="text-booking-gray">Appointments Booked</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-booking-primary mb-2">98%</div>
+              <p className="text-booking-gray">Customer Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Why Choose Us Section */}
+      <section id="why-us" className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Why Choose Booking Hero</h2>
+            <p className="section-subtitle">The smart choice for growing service businesses</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="bg-booking-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Calendar className="h-8 w-8 text-booking-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-booking-dark">Boost Appointments</h3>
+              <p className="text-booking-gray">Proven to increase bookings by making scheduling available 24/7, even when you're closed.</p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="bg-booking-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-booking-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-booking-dark">Secure & Fast</h3>
+              <p className="text-booking-gray">Integrated with Via Payments for seamless and secure transactions. Your data is always protected.</p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="bg-booking-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-booking-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-booking-dark">Scales With You</h3>
+              <p className="text-booking-gray">From single-person operations to multi-location businesses, our platform grows with your needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* UK Launch Section */}
+      <section id="uk-launch" className="py-20 bg-booking-dark text-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Expanding to the UK in 2025
+              </h2>
+              <p className="text-xl mb-6">
+                Be among the first 100 businesses to join our UK launch and receive a free 1-year subscription.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                {[
+                  'Priority access to new features',
+                  'Dedicated onboarding specialist',
+                  'Free migration from your current system',
+                  'Exclusive UK promotional materials'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="mt-1 bg-booking-primary/20 rounded-full p-1">
+                      <Check className="h-4 w-4 text-booking-primary" />
+                    </div>
+                    <p className="ml-3 text-white/90">{item}</p>
+                  </div>
+                ))}
+              </div>
+              
+              <button className="bg-white text-booking-primary hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-300">
+                Join UK Waitlist
+              </button>
+            </div>
+            
+            <div className="w-full lg:w-1/2">
+              <div className="bg-booking-primary/10 border border-booking-primary/20 rounded-lg p-8">
+                <h3 className="text-2xl font-bold mb-4">UK Launch Timeline</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex">
+                    <div className="mr-4">
+                      <div className="w-8 h-8 bg-booking-primary rounded-full flex items-center justify-center">
+                        <span className="font-bold">1</span>
+                      </div>
+                      <div className="h-full w-0.5 bg-booking-primary/30 mx-auto mt-2"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Q1 2025: Early Access</h4>
+                      <p className="text-white/80">First 50 businesses get early platform access</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex">
+                    <div className="mr-4">
+                      <div className="w-8 h-8 bg-booking-primary rounded-full flex items-center justify-center">
+                        <span className="font-bold">2</span>
+                      </div>
+                      <div className="h-full w-0.5 bg-booking-primary/30 mx-auto mt-2"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Q2 2025: UK Launch Event</h4>
+                      <p className="text-white/80">Official launch party in London</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex">
+                    <div className="mr-4">
+                      <div className="w-8 h-8 bg-booking-primary rounded-full flex items-center justify-center">
+                        <span className="font-bold">3</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Q3 2025: Full UK Rollout</h4>
+                      <p className="text-white/80">Nationwide availability with local support</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Final CTA */}
+      <CTASection 
+        title="Ready to Transform Your Business?" 
+        subtitle="Join 170+ successful service businesses already using Booking Hero."
+        primaryCTA="Start for Free"
+        secondaryCTA="Book a Demo"
+        backgroundStyle="light"
+      />
+      
+      {/* Footer */}
+      <footer className="bg-booking-dark text-white py-12">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                <span className="text-booking-primary">Booking</span>Hero
+              </h3>
+              <p className="text-white/70 mb-4">
+                The all-in-one booking and CRM solution for service businesses.
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-white/70 hover:text-booking-primary">
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd"></path>
+                  </svg>
+                </a>
+                <a href="#" className="text-white/70 hover:text-booking-primary">
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                  </svg>
+                </a>
+                <a href="#" className="text-white/70 hover:text-booking-primary">
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Product</h3>
+              <ul className="space-y-2">
+                <li><a href="#features" className="text-white/70 hover:text-booking-primary">Features</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Pricing</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Integrations</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Updates</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Company</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">About Us</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Careers</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Blog</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Resources</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Help Center</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Documentation</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Webinars</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">Partners</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-white/70 mb-4 md:mb-0">
+              © 2024 Booking Hero. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">Privacy Policy</a>
+              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">Terms of Service</a>
+              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
