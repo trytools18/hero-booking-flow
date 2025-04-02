@@ -106,20 +106,10 @@ const Index = () => {
           </div>
           
           {/* Stats Section */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-booking-primary mb-2">170+</div>
+              <div className="text-4xl font-bold text-booking-primary mb-2">200+</div>
               <p className="text-booking-gray">{t('businessesOnboarded')}</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl font-bold text-booking-primary mb-2">€4,000+</div>
-              <p className="text-booking-gray">{t('monthlyRevenue')}</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl font-bold text-booking-primary mb-2">40,000+</div>
-              <p className="text-booking-gray">{t('appointmentsBooked')}</p>
             </div>
             
             <div className="text-center">
@@ -161,88 +151,6 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-booking-dark">{t('scalesWithYou')}</h3>
               <p className="text-booking-gray">{t('scalesWithYouDesc')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* UK Launch Section */}
-      <section id="uk-launch" className="py-20 bg-booking-dark text-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {t('ukLaunchTitle')}
-              </h2>
-              <p className="text-xl mb-6">
-                {t('ukLaunchDesc')}
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                {[
-                  t('priorityAccess'),
-                  t('dedicatedOnboarding'),
-                  t('freeMigration'),
-                  t('exclusivePromo')
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="mt-1 bg-booking-primary/20 rounded-full p-1">
-                      <Check className="h-4 w-4 text-booking-primary" />
-                    </div>
-                    <p className="ml-3 text-white/90">{item}</p>
-                  </div>
-                ))}
-              </div>
-              
-              <button className="bg-white text-booking-primary hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                {t('joinWaitlist')}
-              </button>
-            </div>
-            
-            <div className="w-full lg:w-1/2">
-              <div className="bg-booking-primary/10 border border-booking-primary/20 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-4">{t('ukLaunchTimeline')}</h3>
-                
-                <div className="space-y-6">
-                  <div className="flex">
-                    <div className="mr-4">
-                      <div className="w-8 h-8 bg-booking-primary rounded-full flex items-center justify-center">
-                        <span className="font-bold">1</span>
-                      </div>
-                      <div className="h-full w-0.5 bg-booking-primary/30 mx-auto mt-2"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold">{t('q1')}</h4>
-                      <p className="text-white/80">{t('q1Desc')}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex">
-                    <div className="mr-4">
-                      <div className="w-8 h-8 bg-booking-primary rounded-full flex items-center justify-center">
-                        <span className="font-bold">2</span>
-                      </div>
-                      <div className="h-full w-0.5 bg-booking-primary/30 mx-auto mt-2"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold">{t('q2')}</h4>
-                      <p className="text-white/80">{t('q2Desc')}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex">
-                    <div className="mr-4">
-                      <div className="w-8 h-8 bg-booking-primary rounded-full flex items-center justify-center">
-                        <span className="font-bold">3</span>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold">{t('q3')}</h4>
-                      <p className="text-white/80">{t('q3Desc')}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

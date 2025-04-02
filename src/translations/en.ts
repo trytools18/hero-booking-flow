@@ -4,7 +4,6 @@ export const enTranslations = {
   features: "Features",
   testimonials: "Testimonials",
   whyChooseUs: "Why Choose Us",
-  ukLaunch: "UK Launch",
   login: "Login",
   startForFree: "Start for Free",
   
@@ -41,7 +40,7 @@ export const enTranslations = {
   
   // Mid-page CTA
   midPageCta: "Start Growing Your Business Today",
-  midPageCtaDesc: "Join 170+ businesses already using Booking Hero to streamline operations and grow their client base.",
+  midPageCtaDesc: "Join 200+ businesses already using Booking Hero to streamline operations and grow their client base.",
   
   // Testimonials Section
   testimonialsTitle: "Loved by Business Owners",
@@ -59,8 +58,6 @@ export const enTranslations = {
   position3: "Director",
   company3: "Tranquil Spa",
   businessesOnboarded: "Businesses Onboarded",
-  monthlyRevenue: "Monthly Recurring Revenue",
-  appointmentsBooked: "Appointments Booked",
   customerSatisfaction: "Customer Satisfaction",
   
   // Why Choose Us Section
@@ -73,25 +70,9 @@ export const enTranslations = {
   scalesWithYou: "Scales With You",
   scalesWithYouDesc: "From single-person operations to multi-location businesses, our platform grows with your needs.",
   
-  // UK Launch Section
-  ukLaunchTitle: "Expanding to the UK in 2025",
-  ukLaunchDesc: "Be among the first 100 businesses to join our UK launch and receive a free 1-year subscription.",
-  priorityAccess: "Priority access to new features",
-  dedicatedOnboarding: "Dedicated onboarding specialist",
-  freeMigration: "Free migration from your current system",
-  exclusivePromo: "Exclusive UK promotional materials",
-  joinWaitlist: "Join UK Waitlist",
-  ukLaunchTimeline: "UK Launch Timeline",
-  q1: "Q1 2025: Early Access",
-  q1Desc: "First 50 businesses get early platform access",
-  q2: "Q2 2025: UK Launch Event",
-  q2Desc: "Official launch party in London",
-  q3: "Q3 2025: Full UK Rollout",
-  q3Desc: "Nationwide availability with local support",
-  
   // Final CTA
   transformBusiness: "Ready to Transform Your Business?",
-  joinBusinesses: "Join 170+ successful service businesses already using Booking Hero.",
+  joinBusinesses: "Join 200+ successful service businesses already using Booking Hero.",
   
   // Footer
   tagline: "The all-in-one booking and CRM solution for service businesses.",
