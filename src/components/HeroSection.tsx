@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -43,7 +44,7 @@ const HeroSection: React.FC = () => {
               
               <div className="relative z-10 shadow-2xl rounded-2xl overflow-hidden border-4 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
                   alt="Booking Hero Platform" 
                   className="w-full h-auto"
                 />
