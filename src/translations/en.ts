@@ -7,7 +7,7 @@ export const enTranslations = {
   startForFree: "Start for Free",
   
   // Hero Section
-  mainHeading: "All-in-One Booking & CRM Solution for Service Businesses",
+  mainHeading: "All-in-One Booking & CRM Solution",
   subHeading: "Booking Hero empowers businesses which provide services with seamless online bookings and smart customer relationship management—all in one platform.",
   bookDemo: "Book a Demo",
   noCardRequired: "No credit card required • Free 14-day trial",
