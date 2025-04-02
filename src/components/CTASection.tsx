@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface CTASectionProps {
   title: string;
@@ -18,6 +19,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   secondaryCTA,
   backgroundStyle = 'light'
 }) => {
+  const { t } = useLanguage();
   let bgClasses = '';
   let textClasses = '';
   

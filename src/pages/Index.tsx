@@ -5,9 +5,12 @@ import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import CTASection from '@/components/CTASection';
 import TestimonialCard from '@/components/TestimonialCard';
-import { Check, Calendar, Scissors, Clock, Shield, Award } from 'lucide-react';
+import { Check, Calendar, Shield, Award } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -23,17 +26,17 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2 order-2 lg:order-1">
-              <h2 className="section-title mb-6">Streamline Your Operations</h2>
+              <h2 className="section-title mb-6">{t('streamlineOps')}</h2>
               <p className="text-lg text-booking-gray mb-8">
-                Manage your entire business from a single, intuitive dashboard. From appointment scheduling to customer management, Booking Hero makes everything easier.
+                {t('streamlineDesc')}
               </p>
               
               <div className="space-y-4">
                 {[
-                  'Reduce no-shows by 80% with automated reminders',
-                  'Save 10+ hours per week on administrative tasks',
-                  'Increase repeat bookings with personalized follow-ups',
-                  'Get paid faster with integrated payment processing'
+                  t('reduceNoShows'),
+                  t('saveTime'),
+                  t('increaseBookings'),
+                  t('getPaidFaster')
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
                     <div className="mt-1 bg-green-100 rounded-full p-1">
@@ -61,10 +64,10 @@ const Index = () => {
       
       {/* Mid-page CTA */}
       <CTASection 
-        title="Start Growing Your Business Today" 
-        subtitle="Join 170+ businesses already using Booking Hero to streamline operations and grow their client base." 
-        primaryCTA="Start for Free"
-        secondaryCTA="Book a Demo"
+        title={t('midPageCta')}
+        subtitle={t('midPageCtaDesc')}
+        primaryCTA={t('startForFree')}
+        secondaryCTA={t('bookDemo')}
         backgroundStyle="gradient"
       />
       
@@ -72,32 +75,32 @@ const Index = () => {
       <section id="testimonials" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="section-title">Loved by Business Owners</h2>
-            <p className="section-subtitle">See what our customers have to say about Booking Hero</p>
+            <h2 className="section-title">{t('testimonialsTitle')}</h2>
+            <p className="section-subtitle">{t('testimonialsSubtitle')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <TestimonialCard 
-              quote="Booking Hero has transformed my salon business. We've reduced no-shows by 75% and increased our monthly bookings by 30%."
-              author="Sarah Johnson"
-              position="Owner"
-              companyName="StyleHouse Salon"
+              quote={t('quote1')}
+              author={t('author1')}
+              position={t('position1')}
+              companyName={t('company1')}
               rating={5}
             />
             
             <TestimonialCard 
-              quote="The CRM features are amazing! I can track customer preferences and offer personalized services that keep them coming back."
-              author="Michael Rodriguez"
-              position="Manager"
-              companyName="Elite Barber Shop"
+              quote={t('quote2')}
+              author={t('author2')}
+              position={t('position2')}
+              companyName={t('company2')}
               rating={5}
             />
             
             <TestimonialCard 
-              quote="Setting up Booking Hero was incredibly easy. Within a day we were taking online bookings and our customers love the convenience."
-              author="Lisa Chen"
-              position="Director"
-              companyName="Tranquil Spa"
+              quote={t('quote3')}
+              author={t('author3')}
+              position={t('position3')}
+              companyName={t('company3')}
               rating={4}
             />
           </div>
@@ -106,22 +109,22 @@ const Index = () => {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-booking-primary mb-2">170+</div>
-              <p className="text-booking-gray">Businesses Onboarded</p>
+              <p className="text-booking-gray">{t('businessesOnboarded')}</p>
             </div>
             
             <div className="text-center">
               <div className="text-4xl font-bold text-booking-primary mb-2">€4,000+</div>
-              <p className="text-booking-gray">Monthly Recurring Revenue</p>
+              <p className="text-booking-gray">{t('monthlyRevenue')}</p>
             </div>
             
             <div className="text-center">
               <div className="text-4xl font-bold text-booking-primary mb-2">40,000+</div>
-              <p className="text-booking-gray">Appointments Booked</p>
+              <p className="text-booking-gray">{t('appointmentsBooked')}</p>
             </div>
             
             <div className="text-center">
               <div className="text-4xl font-bold text-booking-primary mb-2">98%</div>
-              <p className="text-booking-gray">Customer Satisfaction</p>
+              <p className="text-booking-gray">{t('customerSatisfaction')}</p>
             </div>
           </div>
         </div>
@@ -131,8 +134,8 @@ const Index = () => {
       <section id="why-us" className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="section-title">Why Choose Booking Hero</h2>
-            <p className="section-subtitle">The smart choice for growing service businesses</p>
+            <h2 className="section-title">{t('whyChooseUsTitle')}</h2>
+            <p className="section-subtitle">{t('whyChooseUsSubtitle')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -140,24 +143,24 @@ const Index = () => {
               <div className="bg-booking-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Calendar className="h-8 w-8 text-booking-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-booking-dark">Boost Appointments</h3>
-              <p className="text-booking-gray">Proven to increase bookings by making scheduling available 24/7, even when you're closed.</p>
+              <h3 className="text-xl font-bold mb-3 text-booking-dark">{t('boostAppointments')}</h3>
+              <p className="text-booking-gray">{t('boostAppointmentsDesc')}</p>
             </div>
             
             <div className="text-center p-6">
               <div className="bg-booking-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-booking-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-booking-dark">Secure & Fast</h3>
-              <p className="text-booking-gray">Integrated with Via Payments for seamless and secure transactions. Your data is always protected.</p>
+              <h3 className="text-xl font-bold mb-3 text-booking-dark">{t('secureAndFast')}</h3>
+              <p className="text-booking-gray">{t('secureAndFastDesc')}</p>
             </div>
             
             <div className="text-center p-6">
               <div className="bg-booking-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-booking-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-booking-dark">Scales With You</h3>
-              <p className="text-booking-gray">From single-person operations to multi-location businesses, our platform grows with your needs.</p>
+              <h3 className="text-xl font-bold mb-3 text-booking-dark">{t('scalesWithYou')}</h3>
+              <p className="text-booking-gray">{t('scalesWithYouDesc')}</p>
             </div>
           </div>
         </div>
@@ -169,18 +172,18 @@ const Index = () => {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Expanding to the UK in 2025
+                {t('ukLaunchTitle')}
               </h2>
               <p className="text-xl mb-6">
-                Be among the first 100 businesses to join our UK launch and receive a free 1-year subscription.
+                {t('ukLaunchDesc')}
               </p>
               
               <div className="space-y-4 mb-8">
                 {[
-                  'Priority access to new features',
-                  'Dedicated onboarding specialist',
-                  'Free migration from your current system',
-                  'Exclusive UK promotional materials'
+                  t('priorityAccess'),
+                  t('dedicatedOnboarding'),
+                  t('freeMigration'),
+                  t('exclusivePromo')
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
                     <div className="mt-1 bg-booking-primary/20 rounded-full p-1">
@@ -192,13 +195,13 @@ const Index = () => {
               </div>
               
               <button className="bg-white text-booking-primary hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                Join UK Waitlist
+                {t('joinWaitlist')}
               </button>
             </div>
             
             <div className="w-full lg:w-1/2">
               <div className="bg-booking-primary/10 border border-booking-primary/20 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-4">UK Launch Timeline</h3>
+                <h3 className="text-2xl font-bold mb-4">{t('ukLaunchTimeline')}</h3>
                 
                 <div className="space-y-6">
                   <div className="flex">
@@ -209,8 +212,8 @@ const Index = () => {
                       <div className="h-full w-0.5 bg-booking-primary/30 mx-auto mt-2"></div>
                     </div>
                     <div>
-                      <h4 className="font-bold">Q1 2025: Early Access</h4>
-                      <p className="text-white/80">First 50 businesses get early platform access</p>
+                      <h4 className="font-bold">{t('q1')}</h4>
+                      <p className="text-white/80">{t('q1Desc')}</p>
                     </div>
                   </div>
                   
@@ -222,8 +225,8 @@ const Index = () => {
                       <div className="h-full w-0.5 bg-booking-primary/30 mx-auto mt-2"></div>
                     </div>
                     <div>
-                      <h4 className="font-bold">Q2 2025: UK Launch Event</h4>
-                      <p className="text-white/80">Official launch party in London</p>
+                      <h4 className="font-bold">{t('q2')}</h4>
+                      <p className="text-white/80">{t('q2Desc')}</p>
                     </div>
                   </div>
                   
@@ -234,8 +237,8 @@ const Index = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-bold">Q3 2025: Full UK Rollout</h4>
-                      <p className="text-white/80">Nationwide availability with local support</p>
+                      <h4 className="font-bold">{t('q3')}</h4>
+                      <p className="text-white/80">{t('q3Desc')}</p>
                     </div>
                   </div>
                 </div>
@@ -247,10 +250,10 @@ const Index = () => {
       
       {/* Final CTA */}
       <CTASection 
-        title="Ready to Transform Your Business?" 
-        subtitle="Join 170+ successful service businesses already using Booking Hero."
-        primaryCTA="Start for Free"
-        secondaryCTA="Book a Demo"
+        title={t('transformBusiness')}
+        subtitle={t('joinBusinesses')}
+        primaryCTA={t('startForFree')}
+        secondaryCTA={t('bookDemo')}
         backgroundStyle="light"
       />
       
@@ -263,7 +266,7 @@ const Index = () => {
                 <span className="text-booking-primary">Booking</span>Hero
               </h3>
               <p className="text-white/70 mb-4">
-                The all-in-one booking and CRM solution for service businesses.
+                {t('tagline')}
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-white/70 hover:text-booking-primary">
@@ -285,44 +288,44 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">Product</h3>
+              <h3 className="text-lg font-semibold mb-4">{t('product')}</h3>
               <ul className="space-y-2">
-                <li><a href="#features" className="text-white/70 hover:text-booking-primary">Features</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Pricing</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Integrations</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Updates</a></li>
+                <li><a href="#features" className="text-white/70 hover:text-booking-primary">{t('features')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('pricing')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('integrations')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('updates')}</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
+              <h3 className="text-lg font-semibold mb-4">{t('company')}</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">About Us</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Careers</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Blog</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Contact</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('aboutUs')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('careers')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('blog')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('contact')}</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">Resources</h3>
+              <h3 className="text-lg font-semibold mb-4">{t('resources')}</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Help Center</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Documentation</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Webinars</a></li>
-                <li><a href="#" className="text-white/70 hover:text-booking-primary">Partners</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('helpCenter')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('documentation')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('webinars')}</a></li>
+                <li><a href="#" className="text-white/70 hover:text-booking-primary">{t('partners')}</a></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/70 mb-4 md:mb-0">
-              © 2024 Booking Hero. All rights reserved.
+              {t('allRightsReserved')}
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">Privacy Policy</a>
-              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">Terms of Service</a>
-              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">Cookie Policy</a>
+              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">{t('privacyPolicy')}</a>
+              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">{t('termsOfService')}</a>
+              <a href="#" className="text-white/70 hover:text-booking-primary text-sm">{t('cookiePolicy')}</a>
             </div>
           </div>
         </div>

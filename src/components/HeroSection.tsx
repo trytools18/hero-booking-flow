@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden hero-gradient">
       <div className="container mx-auto px-4 md:px-6">
@@ -10,28 +13,28 @@ const HeroSection: React.FC = () => {
           {/* Hero Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 staggered-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-booking-dark mb-6">
-              All-in-One Booking & CRM Solution for Service Businesses
+              {t('mainHeading')}
             </h1>
             <p className="text-xl md:text-2xl text-booking-gray mb-8 max-w-2xl mx-auto lg:mx-0">
-              Booking Hero empowers barbershops, salons, and spas with seamless online bookings and smart customer relationship management—all in one platform.
+              {t('subHeading')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <Button 
                 className="text-lg px-8 py-6 gradient-button w-64 sm:w-auto"
                 onClick={() => window.location.href = '#signup'}
               >
-                Start for Free
+                {t('startForFree')}
               </Button>
               <Button 
                 variant="outline" 
                 className="text-lg px-8 py-6 border-booking-primary text-booking-primary hover:bg-booking-primary hover:text-white w-64 sm:w-auto"
                 onClick={() => window.location.href = '#demo'}
               >
-                Book a Demo
+                {t('bookDemo')}
               </Button>
             </div>
             <div className="mt-8 text-sm text-booking-gray">
-              <p>No credit card required • Free 14-day trial</p>
+              <p>{t('noCardRequired')}</p>
             </div>
           </div>
           
@@ -74,7 +77,7 @@ const HeroSection: React.FC = () => {
       
       {/* Trusted By Section */}
       <div className="container mx-auto px-4 md:px-6 mt-16 md:mt-24">
-        <p className="text-center text-booking-gray font-medium mb-6">TRUSTED BY LEADING SERVICE BUSINESSES</p>
+        <p className="text-center text-booking-gray font-medium mb-6">{t('trustedBy')}</p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           <div className="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
             <span className="text-lg font-bold text-booking-dark">CutMaster</span>
