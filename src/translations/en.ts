@@ -1,3 +1,4 @@
+
 export const enTranslations = {
   // Navbar
   features: "Features",
@@ -45,15 +46,15 @@ export const enTranslations = {
   testimonialsTitle: "Loved by Business Owners",
   testimonialsSubtitle: "See what our customers have to say about Booking Hero",
   quote1: "Booking Hero has transformed my salon business. We've reduced no-shows by 75% and increased our monthly bookings by 30%.",
-  author1: "Sarah Johnson",
+  author1: "Sophia Papadopoulos",
   position1: "Owner",
   company1: "StyleHouse Salon",
   quote2: "The CRM features are amazing! I can track customer preferences and offer personalized services that keep them coming back.",
-  author2: "Michael Rodriguez",
+  author2: "Nikos Andreou",
   position2: "Manager",
   company2: "Elite Barber Shop",
   quote3: "Setting up Booking Hero was incredibly easy. Within a day we were taking online bookings and our customers love the convenience.",
-  author3: "Lisa Chen",
+  author3: "Elena Georgiou",
   position3: "Director",
   company3: "Tranquil Spa",
   businessesOnboarded: "Businesses Onboarded",
