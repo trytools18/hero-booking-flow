@@ -52,7 +52,7 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute -top-5 -right-5 w-20 h-20 bg-booking-light rounded-full opacity-50"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" 
                   alt="Booking Hero Dashboard" 
                   className="rounded-lg shadow-2xl relative z-10 border-4 border-white"
                 />
